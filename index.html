@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Revenue Toolkit — Lead Generation & Outreach Bundle</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #05070a;
+      --surface: #0d1117;
+      --surface2: #161b22;
+      --border: #21262d;
+      --text: #f0f6fc;
+      --text2: #8b949e;
+      --amber: #f59e0b;
+      --amber-dim: #b45309;
+      --blue: #3b82f6;
+      --green: #22c55e;
+      --purple: #a855f7;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    body { min-height: 100vh; }
+
+    /* Animated grid background */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image:
+        linear-gradient(rgba(245,158,11,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245,158,11,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 4rem; position: relative; z-index: 1; }
+
+    /* HERO */
+    header { text-align: center; padding: 4rem 0 3rem; }
+    .badge {
+      display: inline-block;
+      background: rgba(245,158,11,0.12);
+      color: var(--amber);
+      border: 1px solid rgba(245,158,11,0.25);
+      padding: 0.35rem 1rem;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    header h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--amber), var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+    header .subtitle {
+      font-size: 1.2rem;
+      color: var(--text2);
+      max-width: 640px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: linear-gradient(135deg, var(--amber), var(--amber-dim));
+      color: #000;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 0.9rem 2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(245,158,11,0.3); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--surface2);
+      color: var(--text);
+      border: 1px solid var(--border);
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 0.9rem 2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .btn-secondary:hover { transform: translateY(-2px); border-color: var(--text2); }
+
+    /* STATS BAR */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem auto;
+      max-width: 900px;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .stat-card .num { font-size: 1.8rem; font-weight: 800; color: var(--amber); }
+    .stat-card .label { font-size: 0.85rem; color: var(--text2); margin-top: 0.3rem; }
+
+    /* PRODUCT CARDS */
+    .section-title { font-size: 1.5rem; font-weight: 700; margin: 3rem 0 1.5rem; text-align: center; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .card:hover { border-color: var(--amber); transform: translateY(-3px); }
+    .card .icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .card .desc { color: var(--text2); font-size: 0.9rem; margin-bottom: 1rem; }
+    .card .price { font-size: 1.3rem; font-weight: 800; color: var(--amber); }
+    .card .price s { font-weight: 400; color: var(--text2); font-size: 0.95rem; margin-left: 0.5rem; }
+
+    /* BUNDLE */
+    .bundle-card {
+      background: linear-gradient(135deg, #1a1500, var(--surface));
+      border: 2px solid var(--amber);
+      border-radius: 24px;
+      padding: 2.5rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .bundle-card .tag {
+      display: inline-block;
+      background: var(--amber);
+      color: #000;
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+    .bundle-card h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.75rem; }
+    .bundle-card .price-big { font-size: 2.5rem; font-weight: 800; color: var(--amber); margin: 1rem 0; }
+    .bundle-card .price-big s { color: var(--text2); font-weight: 400; font-size: 1.5rem; margin-left: 0.75rem; }
+    .bundle-card .saves { color: var(--green); font-weight: 600; }
+    .bundle-card .features-list { list-style: none; margin: 1.5rem 0; }
+    .bundle-card .features-list li { padding: 0.5rem 0; color: var(--text2); }
+    .bundle-card .features-list li::before { content: '✓ '; color: var(--green); font-weight: 700; }
+
+    /* FAQ */
+    .faq { margin: 3rem 0; }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .faq-item h4 { font-weight: 600; font-size: 1rem; margin-bottom: 0.4rem; }
+    .faq-item p { color: var(--text2); font-size: 0.9rem; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: var(--text2);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 640px) {
+      header { padding: 2rem 0; }
+      .container { padding: 1rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HERO -->
+  <header>
+    <div class="badge">⚡ Launch July 2026</div>
+    <h1>AI Revenue Toolkit</h1>
+    <p class="subtitle">
+      Four battle-tested assets that turn cold outreach into booked calls.
+      Leads, templates, prompts, and a scoring engine — ready to use today.
+    </p>
+    <div class="cta-row">
+      <a href="#bundle" class="btn-primary">🎯 Get the Bundle — $37</a>
+      <a href="#products" class="btn-secondary">📦 See Individual Products</a>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat-card">
+      <div class="num">50</div>
+      <div class="label">Proven Email Templates</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">10</div>
+      <div class="label">Industries Covered</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">7</div>
+      <div class="label">Scoring Dimensions</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">$58</div>
+      <div class="label">Individual Value (save 36%)</div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <h2 class="section-title" id="products">📦 What's Inside</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="icon">📧</div>
+      <h3>Cold Email Swipe File</h3>
+      <div class="desc">50 proven templates across 10 categories: outreach, follow-ups, partnerships, referral requests, and more. Every template has a subject line line that gets opens.</div>
+      <div class="price">$19 <s>$29</s></div>
+    </div>
+    <div class="card">
+      <div class="icon">🎯</div>
+      <h3>AI Outreach Score Tool</h3>
+      <div class="desc">Python CLI that scores leads across 7 dimensions (industry, seniority, trigger events, engagement, personalization, etc.). Exports color-coded CSV.</div>
+      <div class="price">$12 <s>$19</s></div>
+    </div>
+    <div class="card">
+      <div class="icon">🧠</div>
+      <h3>Prompt Engineering Playbook</h3>
+      <div class="desc">30 battle-tested prompts using the R.A.C.E. framework. 4 sections: content, business & ops, productivity, analysis. Copy-paste ready.</div>
+      <div class="price">$15 <s>$24</s></div>
+    </div>
+    <div class="card">
+      <div class="icon">📊</div>
+      <h3>AI ROI Calculator (Spreadsheet)</h3>
+      <div class="desc">5 automation categories, 3 scenario models, break-even analysis. Show clients exactly how much they'll save — in their own numbers.</div>
+      <div class="price">$12 <s>$19</s></div>
+    </div>
+  </div>
+
+  <!-- BUNDLE -->
+  <div class="bundle-card" id="bundle">
+    <span class="tag">🔥 Best Value</span>
+    <h2>Complete Revenue Toolkit Bundle</h2>
+    <p style="color: var(--text2); max-width: 500px; margin: 0 auto;">Everything you need to build, score, and send high-converting outreach campaigns.</p>
+    <div class="price-big">$37 <s>$58</s></div>
+    <div class="saves">🎉 You save $21 (36% off)</div>
+    <ul class="features-list">
+      <li>50 cold email templates for AI services</li>
+      <li>Python scoring tool with 7 dimensions</li>
+      <li>10 pre-filled sample leads (test immediately)</li>
+      <li>30 R.A.C.E. framework prompts</li>
+      <li>ROI calculator with 3 scenario models</li>
+      <li>Immediate download — no waiting</li>
+    </ul>
+    <a href="#" class="btn-primary" onclick="alert('📥 Bundle ready for Gumroad upload! Contact devinelwell@proton.me to purchase.')">🎯 Get the Bundle — $37</a>
+    <p style="color: var(--text2); font-size: 0.8rem; margin-top: 1rem;">30-day money-back guarantee · Immediate download</p>
+  </div>
+
+  <!-- TESTIMONIAL PLACEHOLDER -->
+  <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; margin: 2rem 0; text-align: center;">
+    <p style="font-size: 0.9rem; color: var(--text2);">"Used the Swipe File to land 3 meetings in my first week. The templates actually sound human."</p>
+    <p style="margin-top: 1rem; font-weight: 600;">— Beta Tester, AI Agency Owner</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2 class="section-title">❓ FAQ</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <h4>What format are the products in?</h4>
+      <p>Markdown (.md) for templates and playbooks — readable in any text editor. Python (.py) for scoring tool. CSV for calculator and sample data.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Who is this for?</h4>
+      <p>Agency owners, freelancers, and solo consultants selling AI automation services. If you send cold emails or manage outreach pipelines, these tools save hours per week.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do I need technical skills to use the scoring tool?</h4>
+      <p>Just Python 3 installed. Run <code>python3 "AI Outreach Score Tool.py" leads.csv</code> and get a scored output. The sample leads file lets you test immediately.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What's the refund policy?</h4>
+      <p>30-day money-back guarantee. If you don't land at least one meeting using these assets, we'll refund in full.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How do I buy?</h4>
+      <p>This bundle will be listed on Gumroad shortly. For now, contact <strong>devinelwell@proton.me</strong> for early access pricing.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>AI Revenue Toolkit © 2026 · Built with focus · Deployed to GitHub Pages</p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem;">Questions? devinelwell@proton.me</p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+name,company,title,industry,employees,icp_industries,target_min_employees,target_max_employees,trigger_events,engagement_signals,personalization_hooks,buying_window
+Sarah Chen,DataFlow Inc,CTO,saas,85,"saas,tech,ai",10,500,"Series A funding announced June 2026","referred by John Smith","Connected on LinkedIn during your AI Agents talk at SaaStr",this quarter
+Marcus Williams,BuildRight Construction,Owner,construction,45,"construction,real estate",5,200,"Expanding to 3 new cities in Q3","opened email 3 times","Loved your post about automating estimating — commented on it",immediate
+Priya Patel,HealthBridge Medical,Director of Operations,healthcare,320,"healthcare",50,1000,"New EHR system implementation","downloaded content","Mentioned on LinkedIn they are exploring AI for admin",next quarter
+James Rodriguez,RetailMax Inc,VP Marketing,ecommerce,1200,"ecommerce,retail",100,5000,"New CMO hired last month","visited website","Their job postings mention AI-driven marketing automation",exploring
+Emily Thompson,CorpLegal LLP,Managing Partner,legal,55,"legal",5,300,"Just won a major class-action case","attended webinar","We have worked with 3 other legal firms in their city — all successful",this quarter
+David Kim,NexGen AI,CEO,ai,25,"saas,tech,ai",5,200,"Launched product at TC Disrupt","referred by mutual connection","Followed up after my podcast appearance last week",immediate
+Lisa Anderson,GreenField Ag,Head of Operations,agriculture,180,"agriculture,manufacturing",50,1000,"Implementing precision farming tech","connected on linkedin","Their team posted about manual data entry bottleneck",next quarter
+Michael Brown,QuantumLeap Consulting,Managing Partner,consulting,60,"consulting,professional services",10,500,"Opening 2 new offices, hiring 30 people","mutual connection","Partner at their firm Sarah recommended I reach out",immediate
+Amanda Foster,Shoreline Properties,Director of Operations,real estate,280,"real estate,construction",50,2000,"Acquired 5 new properties this quarter","mutual connection",,next quarter
+Ryan Taylor,Omega Innovations,CTO,manufacturing,450,"manufacturing,logistics",100,5000,"Digital transformation initiative announced","downloaded content","They just posted looking for automation vendor on LinkedIn",this quarter

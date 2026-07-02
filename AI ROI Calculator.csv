@@ -1,0 +1,62 @@
+AI Automation ROI Calculator - Input Sheet
+,,,,,,
+Category,Task Description,Current Hours/Week,Current Hourly Cost ($),Team Members Assigned,Total Weekly Cost ($)
+DATA ENTRY,Invoice data extraction,8,35,1,280
+DATA ENTRY,CRM data cleanup,5,35,1,175
+DATA ENTRY,Spreadsheet reconciliation,6,40,1,240
+DATA ENTRY,Form-to-database entry,10,30,2,600
+,,SUBTOTAL DATA ENTRY,,,1295
+COMMUNICATION,Customer support email triage,15,30,2,450
+COMMUNICATION,Internal Slack/email routing,4,40,1,160
+COMMUNICATION,Meeting scheduling & calendar,5,35,1,175
+COMMUNICATION,Client follow-up reminders,3,30,1,90
+,,SUBTOTAL COMMUNICATION,,,875
+CONTENT,Social media post creation,8,45,1,360
+CONTENT,Blog/article drafting,10,50,1,500
+CONTENT,Email newsletter assembly,6,40,1,240
+CONTENT,Image/graphic resizing,4,35,1,140
+,,SUBTOTAL CONTENT,,,1240
+REPORTING,Weekly performance reports,6,45,1,270
+REPORTING,Data aggregation & dashboards,8,50,1,400
+REPORTING,Metrics tracking & analysis,5,55,1,275
+REPORTING,Client-facing report generation,8,45,1,360
+,,SUBTOTAL REPORTING,,,1305
+ADMIN,Expense report processing,3,30,1,90
+ADMIN,Onboarding new hires paperwork,4,35,1,140
+ADMIN,Invoice generation & sending,3,30,1,90
+ADMIN,Document filing & organization,5,25,1,125
+,,SUBTOTAL ADMIN,,,445
+,,,,,,
+,,,,,,
+,,,,TOTAL WEEKLY COST,$5,160
+,,,,TOTAL MONTHLY COST (x4.33),$22,343
+,,,,TOTAL ANNUAL COST (x52),$268,320
+,,,,,,
+ROI CALCULATION,,,,,
+,,,,,,
+AI Automation Scenario,,Conservative,Moderate,Aggressive
+Hours Automated Per Week (Typical 60-80% of manual tasks),,59,69,79
+Automation Percentage,,60%,70%,80%
+Monthly Hours Saved,,255,299,342
+Cost Savings at $10/hr AI Operation ($)
+,,AI costs $10/hr for agent runtime + $199/mo subscription,,
+Monthly AI Cost ($10/hr × hours automated × 4.33 weeks),,$2,554,$2,987,$3,419
+Monthly Subscription (enterprise tier),,199,199,199
+Total Monthly AI Cost,,$2,753,$3,186,$3,618
+Monthly Savings Before AI (from above),,$22,343,$22,343,$22,343
+NET MONTHLY SAVINGS,,$19,590,$19,157,$18,725
+NET ANNUAL SAVINGS,,$235,080,$229,884,$224,700
+Setup Cost (one-time — $2,500-$5,000),,2500,3500,5000
+BREAK-EVEN (weeks),,0.13,0.18,0.27
+,,,,,,
+,,,,,,
+PAYOUT TABLE — ESTIMATED MONTHLY VALUE: $19K-$20K/mo saved
+,,,,,,
+GUMROAD TIER PRICING,,,,,
+Tier,Price Per Copy,Est. Sales/Month,Revenue/Month,Notes
+Free with email capture,"$0 (email req.)",200,0,Build list
+Basic Spreadsheet Only,$12,50,600,CSV + instructions
+Pro Spreadsheet + Playbook,$19,30,570,CSV + 40p automation guide
+Enterprise Kit + Consultation,$37,15,555,Includes 1hr call
+Bundle with Swipe File,$29,40,1,160,Cross-sell strategy
+,,,,TOTAL TIERED,$2,885
